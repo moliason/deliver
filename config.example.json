@@ -1,0 +1,61 @@
+{
+  "gitlab": {
+    "url": "https://gitlab.example.com",
+    "clone_protocol": "https",
+    "groups": {
+      "arch/mcu_demo": "your-group/arch/mcu_demo",
+      "arch/mcu_demo/common": "your-group/arch/mcu_demo/common",
+      "hal": "your-group/hal"
+    }
+  },
+  "redmine": {
+    "url": "https://redmine.example.com",
+    "project_id": "delivery-project",
+    "delivery_subject": "交付清单",
+    "change_subject": "引脚相关修改",
+    "status": "Verified",
+    "excluded_projects": [],
+    "reason_fields": ["（研发）原因分析1", "（研发）原因分析2", "（研发）原因分析3"],
+    "custom_fields": {
+      "match_value": "序号",
+      "reason_category": "(研发）原因分类",
+      "reason_analysis": "（研发）原因分析1",
+      "reason_analysis2": "（研发）原因分析2",
+      "reason_analysis3": "（研发）原因分析3",
+      "owner": "整改人",
+      "deliverables": "交付物清单",
+      "design_commit_id": "架构设计git commit id",
+      "main_commit_id": "main&libopt git commit id",
+      "pin_commit_id": "pin_function git commit id",
+      "reference_commit_id": "设计参考git commit id"
+    }
+  },
+  "repositories": {
+    "architecture_group": "arch/{series}",
+    "hal_group": "hal",
+    "series_aliases": {},
+    "hal": {"MCU_DEMO": "demo_hal"},
+    "case": {"MCU_DEMO": "demo_case"},
+    "example": {"MCU_DEMO": "demo_example"},
+    "example_module_paths": {"syscfg": ["DBG", "SYS"]},
+    "libraries": {"LIB_ENET": "LWIP", "LIB_USB": "USB"},
+    "library_roots": {"MCU_DEMO": "Firmware/MCU_DEMO"}
+  },
+  "naming": {
+    "series_prefix": "MCU_",
+    "hal_pattern": "HAL_H([A-Z0-9]+)_(C|H)"
+  },
+  "dingtalk": {
+    "enabled": false,
+    "space_id": "",
+    "folder_ids": [],
+    "series_aliases": {},
+    "series_paths": {}
+  },
+  "module_list": {
+    "issue_id": null,
+    "blacklist": [".git", "doc"],
+    "whitelist": []
+  },
+  "selection_mapping": "mcu_selection_mapping.example.ini"
+}
